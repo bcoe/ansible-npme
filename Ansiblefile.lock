@@ -1,0 +1,10 @@
+GIT
+  remote: https://github.com/guillaumededrie/ansible-role-couchdb
+  ref: master
+  sha: ab9d707aa6fe315eaf893f17bdb6eb22432843a4
+  specs:
+    guillaumededrie.couchdb (0.0.0)
+
+DEPENDENCIES
+  guillaumededrie.couchdb (>= 0)
+
