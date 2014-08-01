@@ -9,7 +9,7 @@ npmE Ansible installs OS-specific dependencies for npm Enteprise:
 
 # Usage
 
-npmE Ansible helps you get npm up and running on a blank Ubuntu (or Debian) image.
+_npmE Ansible_ uses the Ansible deployment tool to install the dependencies for npmE on a blank Ubuntu (or other Debian-like server).
 
 Simply follow these instructions (_even if you've never used Ansible before, it's easy!_):
 
