@@ -21,6 +21,10 @@ Simply follow these instructions (_even if you've never used Ansible before, it'
 # Node.js
 role "laggyluke.nodejs"
 
+# build essentials.
+role "Ansibles.build-essential",
+  github: "bcoe/build-essential.git"
+
 # npmE
 role "bcoe.npme"
 ```
