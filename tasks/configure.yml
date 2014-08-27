@@ -11,7 +11,7 @@
 - name: copy couchdb configuration
   sudo: true
   notify: 'restart couchdb'
-  template: >
+  copy: >
     src=local.ini
     dest=/etc/nginx/nginx.conf
     owner=ubuntu

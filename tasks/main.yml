@@ -29,5 +29,5 @@
 
 # Configure dependencies.
   - name: configure
-    include: 'couchdb.yml'
+    include: 'configure.yml'
     when: configure | default(false)
