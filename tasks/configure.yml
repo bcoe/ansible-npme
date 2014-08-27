@@ -13,7 +13,7 @@
   notify: 'restart couchdb'
   copy: >
     src=local.ini
-    dest=/etc/nginx/nginx.conf
-    owner=ubuntu
-    group=ubuntu
+    dest=/etc/couchdb/local.ini
+    owner=couchdb
+    group=couchdb
     mode=770
