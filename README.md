@@ -35,4 +35,13 @@ role "bcoe.npme"
 8. Update `inventory` to point to the blank Ubuntu image.
 9. Run: `ansible-playbook ./deploy.yml -i inventory`.
 
+# Centos
+
+```
+nano /etc/sudoers
+
+ALL            ALL = (ALL) NOPASSWD: ALL
+adduser npme
+```
+
 That's all there is to it! patches welcome.

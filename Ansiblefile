@@ -1,5 +1,3 @@
-# Node.js
-role "laggyluke.nodejs"
-
 role "Ansibles.build-essential",
-  github: "bcoe/build-essential.git"
+  github: "bcoe/build-essential.git",
+  ref: "redhat"

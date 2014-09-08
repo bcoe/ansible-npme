@@ -1,38 +1,42 @@
 ---
-  - name: create npme directories
-    sudo: true
-    file: >
-      path={{item}}
-      state=directory
-      owner={{npme_owner}}
-      group={{npme_group}}
-      mode=755
-    with_items:
-      - /etc/npme
-      - /etc/npme/bin
-      - /etc/npme/node_modules
-      - /etc/npme/logs
+#  - name: create npme directories
+#    sudo: true
+#    file: >
+#      path={{item}}
+#      state=directory
+#      owner={{npme_owner}}
+#      group={{npme_group}}
+#      mode=755
+#    with_items:
+#      - /etc/npme
+#      - /etc/npme/bin
+#      - /etc/npme/node_modules
+#      - /etc/npme/logs
 
-  - name: install couch-app bin
-    sudo: true
-    copy: >
-      src=install-couch-app.sh
-      dest=/etc/npme/bin/install-couch-app.sh
-      owner={{npme_owner}}
-      group={{npme_group}}
-      mode=777
+#  - name: install couch-app bin
+#    sudo: true
+#    copy: >
+#      src=install-couch-app.sh
+#      dest=/etc/npme/bin/install-couch-app.sh
+#      owner={{npme_owner}}
+#      group={{npme_group}}
+#      mode=777
+#
+#  - name: install bootstrap config
+#    sudo: true
+#    copy: >
+#      src={{item}}
+#      dest="/etc/npme/{{item}}"
+#      owner={{npme_owner}}
+#      group={{npme_group}}
+#      mode=755
+#    with_items:
+#      - package.json
+#      - "{{npme_service_json_path}}"
 
-  - name: install bootstrap config
-    sudo: true
-    copy: >
-      src={{item}}
-      dest="/etc/npme/{{item}}"
-      owner={{npme_owner}}
-      group={{npme_group}}
-      mode=755
-    with_items:
-      - package.json
-      - "{{npme_service_json_path}}"
+  - name: perform centos-specific installation
+    include: 'centos/install.yml'
+    when: npme_platform == "centos"
 
   - name: install npm@npme-beta
     command: "{{npme_npm_bin}} install {{npme_npm_version}} chdir=/etc/npme"
