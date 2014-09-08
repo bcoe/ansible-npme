@@ -39,7 +39,6 @@ role "bcoe.npme"
 
 ```
 nano /etc/sudoers
-
 ALL            ALL = (ALL) NOPASSWD: ALL
 adduser npme
 ```

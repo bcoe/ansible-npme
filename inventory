@@ -1,2 +1,2 @@
 [npme]
-root@ec2-54-68-115-252.us-west-2.compute.amazonaws.com
+npme.example.com npme_url=http://url-of-npm-enterprise-installation-server
