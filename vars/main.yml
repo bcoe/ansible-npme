@@ -1,6 +1,3 @@
-# by default run Ansible script in install mode:
-install: true
-
 # what platform are we building for?
 npme_platform: trusty
 
@@ -17,9 +14,6 @@ npme_npm_bin: npm
 
 # nginx build information.
 npme_nginx_user: root
-
-# node build information.
-npme_node_version: 0.10.31
 
 # CouchDB build information.
 npme_couchdb_owner: couchdb
