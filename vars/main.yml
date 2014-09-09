@@ -1,4 +1,4 @@
-npme_platform: ubuntu
+npme_platform: trusty
 npme_owner: ubuntu
 npme_group: ubuntu
 npme_home_directory: "/home/{{npme_owner}}"

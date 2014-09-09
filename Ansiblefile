@@ -1,3 +1,0 @@
-role "Ansibles.build-essential",
-  github: "bcoe/build-essential.git",
-  ref: "redhat"

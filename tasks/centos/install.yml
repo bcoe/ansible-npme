@@ -1,6 +1,0 @@
----
-  - name: install nodejs
-    include: 'nodejs.yml'
-
-  - name: install couchdb
-    include: 'couchdb.yml'

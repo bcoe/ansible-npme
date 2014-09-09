@@ -34,7 +34,7 @@
       - package.json
       - "{{npme_service_json_path}}"
 
-  - name: perform centos-specific installation
+  - name: perform centos65-specific installation
     include: 'centos/install.yml'
     when: npme_platform == "centos"
 
@@ -44,6 +44,6 @@
   - name: install ndm
     command: "{{npme_npm_bin}} install ndm chdir=/etc/npme"
 
-  - name: perform ubuntu-specific installation
-    include: 'ubuntu/install.yml'
-    when: npme_platform == "ubuntu"
+  - name: perform trusty-specific installation
+    include: 'trusty/install.yml'
+    when: npme_platform == "trusty"
