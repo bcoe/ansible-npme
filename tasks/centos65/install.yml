@@ -16,3 +16,11 @@
 
   - name: install couchdb
     include: 'couchdb.yml'
+
+  - name: add 8080 to iptables
+    sudo: true
+    command: iptables -I INPUT 5 -i eth0 -p tcp --dport 8080 -m state --state NEW,ESTABLISHED -j ACCEPT
+
+  - name: save iptables
+    sudo: true
+    command: service iptables save
