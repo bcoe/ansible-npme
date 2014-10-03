@@ -63,7 +63,7 @@
     include: 'centos65/install.yml'
     when: npme_platform == "centos65"
 
-  - name: install npm@npme-beta
+  - name: install a good version of npm
     sudo: true
     command: "{{npme_npm_bin}} install {{npme_npm_version}} chdir=/etc/npme"
 
